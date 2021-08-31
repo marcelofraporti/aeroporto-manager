@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
+
+import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import sun.security.util.Password;
+import javax.persistence.Table;
+
 
 /**
  *
@@ -16,14 +15,85 @@ import sun.security.util.Password;
  */
 
 @Entity
+@Table(name="usuario")
 public class Usuario {
     @Id
     @GeneratedValue
-    public int id;
-    public String email;
-    public String nome;
-    public String cpf;
-    public Password password;
-    public boolean isAdmin;
-    public String dataNascimento;
+    @Column(name="id")
+    
+    private int id;
+    @Column(name="email")
+    
+    private String email;
+    @Column(name="nome")
+    
+    private String nome;
+    @Column(name="cpf")
+    
+    private String cpf;
+    @Column(name="senha")
+    
+    private String senha;
+    @Column(name="isAdmin")
+    private boolean isAdmin;
+    
+    @Column(name="dataNascimento")
+    private Date dataNascimento;
+
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String password) {
+        this.senha = password;
+    }
+
+    public boolean isIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
 }
