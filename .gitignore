@@ -2,3 +2,7 @@
 /AeroportoManager/nbproject/private/
 /AeroportoManager/build/
 /AeroportoManager/dist/
+AeroportoManager/nbproject/build-impl.xml
+AeroportoManager/nbproject/genfiles.properties
+AeroportoManager/nbproject/project.properties
+AeroportoManager/src/negocio/Aeroporto.java
